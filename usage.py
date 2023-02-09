@@ -10,7 +10,7 @@ import torchvision.transforms as transforms
 import os
 import argparse
 
-import progress_bar
+from utils import progress_bar
 
 from gnn_explain import gnn_explain
 
