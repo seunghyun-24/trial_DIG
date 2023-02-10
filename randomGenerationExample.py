@@ -5,6 +5,10 @@ conf = json.load(open('config/rand_gen_zinc250k_config_dict.json'))
 dataset = ZINC250k(one_shot=False, use_aug=True)
 loader = DenseDataLoader(dataset, batch_size=conf['batch_size'], shuffle=True)
 
+USE_CUDA = torch.cuda.is_available() # GPU를 사용가능하면 True, 아니라면 False를 리턴
+device = torch.device("cuda" if USE_CUDA else "cpu") # GPU 사용 가능하면 사용하고 아니면 CPU 사용
+print("다음 기기로 학습합니다:", device)
+
 from dig.ggraph.method import GraphDF
 runner = GraphDF()
 lr = 0.001
