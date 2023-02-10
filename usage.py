@@ -8,7 +8,7 @@ import time
 ## Imports for plotting
 import matplotlib.pyplot as plt
 from IPython.display import set_matplotlib_formats
-set_matplotlib_formats('svg', 'pdf') # For export
+#set_matplotlib_formats('svg', 'pdf') # For export
 from matplotlib.colors import to_rgb
 import matplotlib
 matplotlib.rcParams['lines.linewidth'] = 2.0
