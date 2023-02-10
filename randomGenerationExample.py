@@ -19,6 +19,7 @@ save_interval = 1
 save_dir = 'rand_gen_zinc250k'
 runner.train_rand_gen(loader=loader, lr=lr, wd=wd, max_epochs=max_epochs,
     model_conf_dict=conf['model'], save_interval=save_interval, save_dir=save_dir)
+model_conf_dict.to(f'cuda:{model.device_ids[0]}')
 
 from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.*')
